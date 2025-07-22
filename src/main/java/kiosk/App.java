@@ -59,7 +59,6 @@ public class App {
                     continue;
             }
             System.out.println(output + "\n");
-
         }
     }
 }
