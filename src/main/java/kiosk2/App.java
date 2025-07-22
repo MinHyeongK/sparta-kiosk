@@ -36,7 +36,7 @@ public class App {
             System.out.println("|  0. 종료             |  종료                                             |");
             System.out.println("---------------------------------------------------------------------------");
 
-            ////입력에 따른 출력
+            //입력에 따른 출력
             int input = sc.nextInt();
             MenuItem output = null;
 
