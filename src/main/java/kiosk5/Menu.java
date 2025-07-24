@@ -1,4 +1,4 @@
-package kiosk4;
+package kiosk5;
 
 import java.util.ArrayList;
 import java.util.List;
@@ -14,6 +14,7 @@ public class Menu {
         makeDessertMenu();
     }
 
+    //TODO: dummyData를 사용하는 방식과 index로 접근하는 방식 중 고민
     private void makeBurgerMenu() {
         burgerMenu.add(new MenuItem("dummyData", 0.0, "dummyData"));
         burgerMenu.add(new MenuItem("ShackBurger", 6.9, "토마토, 양상추, 쉑소스가 토핑된 치즈버거"));
@@ -37,7 +38,7 @@ public class Menu {
         dessertMenu.add(new MenuItem("Cookie", 1.5, "겉은 바삭하고 속은 부드러운 쿠키"));
     }
 
-
+    //전체 메뉴 출력
     protected void printMenu(int categoryNum){
         System.out.println("------------------------------------------------------------------------------");
         switch (categoryNum){
@@ -70,19 +71,20 @@ public class Menu {
         }
     }
 
+    //선택 메뉴 출력
     protected void printManuItem(int currentPage, int inputNum){
         switch(currentPage){
             case 1:
-                System.out.println("선택 메뉴명: " + burgerMenu.get(inputNum).name);
-                System.out.println("선택 메뉴가격: " + burgerMenu.get(inputNum).price);
+                System.out.println("선택 메뉴명: " + burgerMenu.get(inputNum).getName());
+                System.out.println("선택 메뉴가격: " + burgerMenu.get(inputNum).getPrice());
                 break;
             case 2:
-                System.out.println("선택 메뉴명: " + beverageMenu.get(inputNum).name);
-                System.out.println("선택 메뉴가격: " + beverageMenu.get(inputNum).price);
+                System.out.println("선택 메뉴명: " + beverageMenu.get(inputNum).getName());
+                System.out.println("선택 메뉴가격: " + beverageMenu.get(inputNum).getPrice());
                 break;
             case 3:
-                System.out.println("선택 메뉴명: " + dessertMenu.get(inputNum).name);
-                System.out.println("선택 메뉴가격: " + dessertMenu.get(inputNum).price);
+                System.out.println("선택 메뉴명: " + dessertMenu.get(inputNum).getName());
+                System.out.println("선택 메뉴가격: " + dessertMenu.get(inputNum).getPrice());
                 break;
         }
     }
