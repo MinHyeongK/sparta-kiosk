@@ -28,7 +28,7 @@ public class Kiosk {
             while(true) {
                 System.out.println("[메뉴보기]를 입력하세요.");
                 String start = sc.next();
-                if (!start.equals("메뉴보기")) {
+                if (start.equals("메뉴보기")) {
                     break;
                 }
             }
