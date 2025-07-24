@@ -11,7 +11,7 @@ public class Kiosk {
     private boolean isStarted;
 
     //키오스크 시작 메서드
-    public void turnOn(){
+    public void start(){
         this.isStarted = true;
 
         //햄버거 메뉴를 menuItems 객체를 생성하고 추가
@@ -23,7 +23,7 @@ public class Kiosk {
         menuItems.add(new MenuItem("Hamburger", 5.4, "비프패티를 기반으로 야채가 들어간 기본버거"));
     }
 
-    //메뉴보기 입력 처리 메서드
+    //메뉴보기 입력 처리 메서드 (고민1. 내부에서 사용할건데 public해야하나 굳이? private해도 될듯, 고민2. method 네이밍이 중요할듯. 해당 클래스가 대상 메서드를 수행하는 주체가 맞는지.
     public void typingShowMenu(){
         //TODO:스캐너를 필요할 때 생성하도록 했는데 그냥 필드에서 바로 생성하는게 더 좋을까요??
         sc = new Scanner(System.in);
