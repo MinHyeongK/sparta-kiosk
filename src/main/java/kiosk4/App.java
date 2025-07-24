@@ -1,10 +1,4 @@
-package kiosk3;
-
-import kiosk3.MenuItem;
-
-import java.util.ArrayList;
-import java.util.List;
-import java.util.Scanner;
+package kiosk4;
 
 public class App {
     public static void main(String[] args) {
@@ -12,5 +6,6 @@ public class App {
         Kiosk kiosk = new Kiosk();
         kiosk.start();
         kiosk.typingShowMenu();
+        kiosk.startMenuSelect();
     }
 }
